@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr" dir="ltr">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="./style.css" />
+	<title>Poadcast Player</title>
+	<script type="text/javascript" src="run.js"></script>
+  <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+
+</head>
+<body>
+<div id="fenetre">
+<div id="mengauche">
+	<h4>Menu de navigation</h4>
+    <ul>
+        <li><a href="./index.html">Accueil</a></li>
+        <li><a href="./aide.html">Aide</a></li>
+    </ul>
+</div>
+
+<div id="corp">
+	<font size="5">
+		<center><h1><a href="./index.html">Podcast Player</a></h1></center>
+	</font>
+	<hr/>
+	<h1> Accès à une page </h1>
+	<!-- Frame de la page web -->
+	<div class="lecteurWEB">
+	 <iframe id="frameRSS" name="frameRSS" type="text/xml" width="0" height="0"></iframe>  
+	<br/>
+	<hr/>
+	<!-- Frame de la vidéo youtube -->
+	<h1> Accès vidéo YouTube </h1>
+	<iframe id="frameVideo" type="text/html" width="0" height="0"></iframe>
+
+	</div>
+<hr/>
+  <h1> Accès à un FluxRSS </h1>
+	<!-- Affichage du fluxRSS-->
+	<div class="lecteurRSS">
+      <ul id="feed">
+      </ul>
+	<br/>
+  	 <script type="text/javascript">
+		document.getElementById("frameVideo").style.visibility = 'hidden';
+		document.getElementById("frameRSS").style.visibility = 'hidden';
+	</script>
+	<hr/>
+		<!-- Partie formulaire -->
+		<h1>Saisie des liens</h1>
+			<font color="red" size="5">
+			<i>/!\ Attention à l'espace en trop /!\</i></font><br/>
+			<br/><label for="monChampWeb">Page web : </label><input type="text" id="monChampWeb" name="monChampWeb"/><br/>
+			<i> ex de page : http://www.lemonde.fr/ , http://www.lefigaro.fr/</i>
+			<br/>
+      <br/><label for="monChampRSS">FluxRss : </label><input type="text" id="monChampRSS" name="monChampRSS"/><br/>
+			<i> ex de flux rss : http://www.lemonde.fr/rss/une.xml</i>
+			<br/>
+			<br/>
+			<label for="monChampVideo">ID vidéo YouTube :</label><input type="text" id="monChampVideo" name="monChampVideo"/><br/>
+			<i>ex d'id : 11waijh6ong</i><br/>
+			<br/>
+			<input onClick="main()" type="reset" id="Valider" value="Valider"/>
+			<input type="reset" id="Reset"/>
+	 <br/>
+	 <br/>
+</div>
+</div>
+</div>
+</body>
+</html>
